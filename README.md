@@ -1,3 +1,4 @@
+
 # Artistry
 Today, you have been tasked with building out a Rails application for a music studio!
 
