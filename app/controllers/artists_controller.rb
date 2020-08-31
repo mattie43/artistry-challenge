@@ -9,8 +9,12 @@ class ArtistsController < ApplicationController
         @artist = Artist.new
     end
     def create
-        artist = Artist.create(artist_params)
-        redirect_to artist_path(artist)
+        @artist = Artist.create(artist_params)
+        if @artist.valid?
+            redirect_to artist_path(@artist)
+        else
+            render :new
+        end
     end
     private
     def artist_params
